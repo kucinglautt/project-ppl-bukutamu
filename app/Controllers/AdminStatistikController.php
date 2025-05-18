@@ -21,6 +21,7 @@ class AdminStatistikController extends BaseController
             $error_message = "Silakan isi kedua tanggal dengan benar.";
         } elseif ($startDate && $endDate && strtotime($startDate) > strtotime($endDate)) {
             $error_message = "\"Dari Tanggal\" tidak boleh lebih lama dari \"Sampai Tanggal\".";
+            return view('admin/adminStatistik');
         }
     
         $GuestModel = new GuestModel();

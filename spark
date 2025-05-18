@@ -78,6 +78,9 @@ require FCPATH . '../app/Config/Paths.php';
 
 $paths = new Config\Paths();
 
+// Define SUPPORTPATH constant for newer CI4 versions
+define('SUPPORTPATH', realpath(__DIR__ . '/vendor/codeigniter4/framework/support') . DIRECTORY_SEPARATOR);
+
 // LOAD THE FRAMEWORK BOOTSTRAP FILE
 require $paths->systemDirectory . '/Boot.php';
 
